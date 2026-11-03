@@ -1232,6 +1232,12 @@ p {
   }
 }
 
+@media (max-width: 750px) {
+  .main-nav a:not(.nav-contact) {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .site-header {
     padding: 0 5%;
@@ -1329,11 +1335,6 @@ p {
 
   .main-nav a {
     font-size: 0.64rem;
-  }
-
-  .main-nav a:first-child,
-  .main-nav a:nth-child(2) {
-    display: none;
   }
 
   .main-nav .nav-contact {
