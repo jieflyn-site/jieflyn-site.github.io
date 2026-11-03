@@ -1,6 +1,7 @@
 :root {
   color-scheme: light;
   --paper: #E7F5DC;
+  --warm-paper: #F5EAD6;
   --paper-deep: #CFE1B9;
   --sage-mid: #B6C99B;
   --sage: #98A77C;
@@ -32,6 +33,10 @@ body {
   color: var(--ink);
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
+}
+
+body > svg {
+  position: absolute;
 }
 
 body::after {
@@ -82,6 +87,7 @@ a {
   grid-template-columns: 1fr auto;
   align-items: center;
   position: relative;
+  background-color: #FFEBCD;
   border-bottom: 1px solid var(--line);
 }
 
@@ -89,10 +95,11 @@ a {
   width: 8px;
   height: 8px;
   position: absolute;
+  z-index: 1;
   bottom: -5px;
   left: 50%;
   border: 1px solid var(--burgundy);
-  background: var(--paper);
+  background: #FFEBCD;
   content: "";
   transform: translateX(-50%) rotate(45deg);
 }
@@ -128,7 +135,7 @@ a {
 .main-nav a,
 .social-links a {
   color: var(--ink);
-  font-size: 0.9rem;
+  font-size: 1.02rem;
   text-decoration: none;
   transition: color 180ms ease;
 }
@@ -136,6 +143,7 @@ a {
 .main-nav a {
   display: inline-flex;
   align-items: center;
+  font-family: var(--mono);
   line-height: 1;
 }
 
@@ -171,6 +179,7 @@ a {
   gap: 6%;
   position: relative;
   overflow: hidden;
+  background-color: var(--warm-paper);
 }
 
 .hero::before {
@@ -613,7 +622,7 @@ p {
   gap: 24px;
   border-top: 1px solid rgba(100, 43, 62, 0.25);
   border-bottom: 1px solid rgba(100, 43, 62, 0.25);
-  background: var(--paper);
+  background-color: var(--warm-paper);
 }
 
 .invitation-section {
@@ -1066,6 +1075,7 @@ p {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 20px;
+  background-color: #FFEBCD;
 }
 
 .site-footer .wordmark {
@@ -1075,7 +1085,7 @@ p {
 .site-footer > p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.78rem;
 }
 
 .site-footer > p span {
@@ -1090,7 +1100,7 @@ p {
 }
 
 .social-links a {
-  font-size: 0.75rem;
+  font-size: 0.88rem;
 }
 
 .site-footer small {
@@ -1334,7 +1344,7 @@ p {
   }
 
   .main-nav a {
-    font-size: 0.64rem;
+    font-size: 0.74rem;
   }
 
   .main-nav .nav-contact {
