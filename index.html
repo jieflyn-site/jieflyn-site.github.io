@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#E7F5DC">
-  <title>JiefLyn — художница и иллюстратор</title>
-  <meta name="description" content="Иллюстрации и придуманные миры JiefLyn. Избранные работы, авторские персонажи и заказы.">
-  <link rel="icon" type="image/png" href="images/favicon.png?v=2">
+  <title>Иллюстратор на заказ — портреты, персонажи, пригласительные | JiefLyn</title>
+  <meta name="description" content="Иллюстратор на заказ — портреты, персонажи, пригласительные. Авторские иллюстрации и индивидуальный подход от JiefLyn.">
+  <link rel="icon" type="image/png" href="images/icon/favicon.png?v=3">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,7 @@
       <a href="#work">Работы <span>02</span></a>
       <a href="#stickers">Стикеры <span>03</span></a>
       <a href="#invitations">Пригласительные <span>04</span></a>
+      <a class="nav-contact jl-nav-order" href="#zakaz">Заказать <span aria-hidden="true">↗</span></a>
       <a class="nav-contact" href="#contact">Написать <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -45,7 +46,10 @@
       <div class="hero-art">
         <div class="art-frame">
           <button class="image-open hero-image-open" type="button" aria-label="Увеличить иллюстрацию с двумя персонажами">
-            <img src="images/32.jpg" alt="Иллюстрация 32" fetchpriority="high">
+            <picture>
+              <source type="image/webp" srcset="/images/webp/32.webp">
+              <img src="images/32.jpg" alt="Иллюстрация 32" fetchpriority="high" loading="eager">
+            </picture>
             <span class="hero-detail-lens hero-detail-lens--man" aria-hidden="true"></span>
             <span class="hero-detail-lens hero-detail-lens--face" aria-hidden="true"></span>
             <span class="hero-detail-lens hero-detail-lens--shoes" aria-hidden="true"></span>
@@ -70,16 +74,17 @@
     <section class="about-section" id="about" aria-labelledby="about-title">
       <div class="about-speedpaint">
         <div class="speedpaint-preview">
-          <video src="images/speedpaint.mp4" poster="images/speedpaint-poster.jpg" muted autoplay loop playsinline preload="metadata" aria-hidden="true"></video>
+          <video src="images/speedpaint/speedpaint.mp4" poster="/images/webp/speedpaint/speedpaint-poster.webp" muted autoplay loop playsinline preload="metadata" aria-hidden="true"></video>
         </div>
       </div>
       <div class="about-details">
         <div class="about-mark" aria-hidden="true">J</div>
         <div class="about-copy">
           <p class="eyebrow">Графический дизайнер · иллюстратор</p>
-          <h2 id="about-title">Немного<br><em>обо мне...</em></h2>
-          <p>Я JiefLyn, графический дизайнер и иллюстратор. Чаще всего рисую персонажей, создаю оригинальные дизайны и изображаю реальных людей. Работаю в разных стилях: от реализма и стилизации до аниме и графики.</p>
-          <p>Создаю пригласительные для мероприятий, карточки персонажей для игр, портреты, стикерпаки и многое другое. Работаю в Procreate на iPad, также использую ноутбук.</p>
+          <h2 id="about-title">Как я <br><em>работаю</em></h2>
+          <p>Я рисую с самого детства, а сейчас это моя работа. Меня зовут JiefLyn, я графический художник-иллюстратор.</p>
+          <p>Больше всего люблю создавать персонажей и миры: нежные, немного странные, с настроением. В заказах мне особенно нравится момент, когда человек видит свой портрет или приглашение и говорит: «Это именно то».</p>
+          <p>Работаю в Procreate. В канале показываю процесс: скетчи, цвет, детали и то, что бывает «за кадром». Здесь можно заказать иллюстрацию, портрет или пригласительное, а можно просто смотреть и вдохновляться.</p>
           <a class="text-link" href="#contact">Расскажите, что задумали <span aria-hidden="true">↗</span></a>
         </div>
         <div class="about-aside"><span>Сейчас</span><p>Возьму несколько<br>новых заказов</p><span class="availability"><i></i> Открыта для проектов</span></div>
@@ -99,163 +104,267 @@
           <div class="gallery-scroll-area" tabindex="0" aria-label="Прокручиваемая сетка работ">
             <div class="gallery-grid">
               <figure class="gallery-card">
+                <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 33">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/33.webp">
+                    <img src="images/33.png" alt="Иллюстрация 33: две героини на фоне таблицы химических элементов" width="5760" height="2304" loading="lazy">
+                  </picture>
+                </button>
+              </figure>
+              <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 32">
-                  <img src="images/32.jpg" alt="Иллюстрация 32" width="3988" height="6336" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/32.webp">
+                    <img src="images/32.jpg" alt="Иллюстрация 32" width="3988" height="6336" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 31">
-                  <img src="images/31.JPG" alt="Иллюстрация 31" width="2246" height="2258" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/31.webp">
+                    <img src="images/31.JPG" alt="Иллюстрация 31" width="2246" height="2258" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 30">
-                  <img src="images/30.jpg" alt="Иллюстрация 30" width="3567" height="3805" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/30.webp">
+                    <img src="images/30.jpg" alt="Иллюстрация 30" width="3567" height="3805" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 29">
-                  <img src="images/29.jpg" alt="Иллюстрация 29" width="2526" height="3477" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/29.webp">
+                    <img src="images/29.jpg" alt="Иллюстрация 29" width="2526" height="3477" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 28">
-                  <img src="images/28.jpg" alt="Иллюстрация 28" width="2301" height="2983" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/28.webp">
+                    <img src="images/28.jpg" alt="Иллюстрация 28" width="2301" height="2983" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 27">
-                  <img src="images/27.jpg" alt="Иллюстрация 27" width="2708" height="3518" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/27.webp">
+                    <img src="images/27.jpg" alt="Иллюстрация 27" width="2708" height="3518" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 26">
-                  <img src="images/26.jpg" alt="Иллюстрация 26" width="2070" height="2728" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/26.webp">
+                    <img src="images/26.jpg" alt="Иллюстрация 26" width="2070" height="2728" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 25">
-                  <img src="images/25.jpg" alt="Иллюстрация 25" width="2308" height="2858" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/25.webp">
+                    <img src="images/25.jpg" alt="Иллюстрация 25" width="2308" height="2858" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 24">
-                  <img src="images/24.jpg" alt="Иллюстрация 24" width="2531" height="2719" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/24.webp">
+                    <img src="images/24.jpg" alt="Иллюстрация 24" width="2531" height="2719" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 23">
-                  <img src="images/23.jpg" alt="Иллюстрация 23" width="1640" height="2360" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/23.webp">
+                    <img src="images/23.jpg" alt="Иллюстрация 23" width="1640" height="2360" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 22">
-                  <img src="images/22.jpg" alt="Иллюстрация 22" width="3650" height="3071" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/22.webp">
+                    <img src="images/22.jpg" alt="Иллюстрация 22" width="3650" height="3071" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 21">
-                  <img src="images/21.JPG" alt="Иллюстрация 21" width="2360" height="1640" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/21.webp">
+                    <img src="images/21.JPG" alt="Иллюстрация 21" width="2360" height="1640" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 20">
-                  <img src="images/20.JPG" alt="Иллюстрация 20" width="2048" height="2112" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/20.webp">
+                    <img src="images/20.JPG" alt="Иллюстрация 20" width="2048" height="2112" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 19">
-                  <img src="images/19.JPG" alt="Иллюстрация 19" width="2048" height="2112" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/19.webp">
+                    <img src="images/19.JPG" alt="Иллюстрация 19" width="2048" height="2112" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 18">
-                  <img src="images/18.jpg" alt="Иллюстрация 18" width="3028" height="3068" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/18.webp">
+                    <img src="images/18.jpg" alt="Иллюстрация 18" width="3028" height="3068" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 17">
-                  <img src="images/17.jpg" alt="Иллюстрация 17" width="3067" height="4753" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/17.webp">
+                    <img src="images/17.jpg" alt="Иллюстрация 17" width="3067" height="4753" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 16">
-                  <img src="images/16.jpg" alt="Иллюстрация 16" width="3287" height="4230" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/16.webp">
+                    <img src="images/16.jpg" alt="Иллюстрация 16" width="3287" height="4230" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 15">
-                  <img src="images/15.jpg" alt="Иллюстрация 15" width="2048" height="2048" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/15.webp">
+                    <img src="images/15.jpg" alt="Иллюстрация 15" width="2048" height="2048" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 14">
-                  <img src="images/14.jpg" alt="Иллюстрация 14" width="2502" height="3580" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/14.webp">
+                    <img src="images/14.jpg" alt="Иллюстрация 14" width="2502" height="3580" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 13">
-                  <img src="images/13.jpg" alt="Иллюстрация 13" width="2349" height="2954" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/13.webp">
+                    <img src="images/13.jpg" alt="Иллюстрация 13" width="2349" height="2954" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 12">
-                  <img src="images/12.jpg" alt="Иллюстрация 12" width="2305" height="2305" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/12.webp">
+                    <img src="images/12.jpg" alt="Иллюстрация 12" width="2305" height="2305" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 11">
-                  <img src="images/11.jpg" alt="Иллюстрация 11" width="3163" height="3882" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/11.webp">
+                    <img src="images/11.jpg" alt="Иллюстрация 11" width="3163" height="3882" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 10">
-                  <img src="images/10.JPG" alt="Иллюстрация 10" width="1332" height="1920" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/10.webp">
+                    <img src="images/10.JPG" alt="Иллюстрация 10" width="1332" height="1920" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 9">
-                  <img src="images/9.JPG" alt="Иллюстрация 9" width="1820" height="1952" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/9.webp">
+                    <img src="images/9.JPG" alt="Иллюстрация 9" width="1820" height="1952" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 8">
-                  <img src="images/8.jpg" alt="Иллюстрация 8" width="1439" height="1817" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/8.webp">
+                    <img src="images/8.jpg" alt="Иллюстрация 8" width="1439" height="1817" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 7">
-                  <img src="images/7.jpg" alt="Иллюстрация 7" width="1200" height="1916" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/7.webp">
+                    <img src="images/7.jpg" alt="Иллюстрация 7" width="1200" height="1916" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 6">
-                  <img src="images/6.jpg" alt="Иллюстрация 6" width="1200" height="1916" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/6.webp">
+                    <img src="images/6.jpg" alt="Иллюстрация 6" width="1200" height="1916" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 5">
-                  <img src="images/5.jpg" alt="Иллюстрация 5" width="1256" height="1440" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/5.webp">
+                    <img src="images/5.jpg" alt="Иллюстрация 5" width="1256" height="1440" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 4">
-                  <img src="images/4.jpg" alt="Иллюстрация 4" width="1200" height="1928" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/4.webp">
+                    <img src="images/4.jpg" alt="Иллюстрация 4" width="1200" height="1928" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 3">
-                  <img src="images/3.jpg" alt="Иллюстрация 3" width="1080" height="1440" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/3.webp">
+                    <img src="images/3.jpg" alt="Иллюстрация 3" width="1080" height="1440" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 2">
-                  <img src="images/2.jpg" alt="Иллюстрация 2" width="1200" height="1928" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/2.webp">
+                    <img src="images/2.jpg" alt="Иллюстрация 2" width="1200" height="1928" loading="lazy">
+                  </picture>
                 </button>
               </figure>
               <figure class="gallery-card">
                 <button class="image-open gallery-image" type="button" aria-label="Увеличить изображение: 1">
-                  <img src="images/1.jpg" alt="Иллюстрация 1" width="1200" height="1928" loading="lazy">
+                  <picture>
+                    <source type="image/webp" srcset="/images/webp/1.webp">
+                    <img src="images/1.jpg" alt="Иллюстрация 1" width="1200" height="1928" loading="lazy">
+                  </picture>
                 </button>
               </figure>
 </div>
@@ -279,61 +388,118 @@
         <div class="sticker-track">
           <div class="sticker-group">
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0873">
-              <img src="images/stikers/IMG_0873.JPG" alt="Стикер 0873" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0873.webp">
+                <img src="images/stikers/IMG_0873.JPG" alt="Стикер 0873" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0874">
-              <img src="images/stikers/IMG_0874.JPG" alt="Стикер 0874" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0874.webp">
+                <img src="images/stikers/IMG_0874.JPG" alt="Стикер 0874" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0875">
-              <img src="images/stikers/IMG_0875.JPG" alt="Стикер 0875" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0875.webp">
+                <img src="images/stikers/IMG_0875.JPG" alt="Стикер 0875" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0876">
-              <img src="images/stikers/IMG_0876.JPG" alt="Стикер 0876" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0876.webp">
+                <img src="images/stikers/IMG_0876.JPG" alt="Стикер 0876" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0877">
-              <img src="images/stikers/IMG_0877.JPG" alt="Стикер 0877" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0877.webp">
+                <img src="images/stikers/IMG_0877.JPG" alt="Стикер 0877" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0878">
-              <img src="images/stikers/IMG_0878.JPG" alt="Стикер 0878" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0878.webp">
+                <img src="images/stikers/IMG_0878.JPG" alt="Стикер 0878" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0879">
-              <img src="images/stikers/IMG_0879.JPG" alt="Стикер 0879" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0879.webp">
+                <img src="images/stikers/IMG_0879.JPG" alt="Стикер 0879" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0880">
-              <img src="images/stikers/IMG_0880.JPG" alt="Стикер 0880" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0880.webp">
+                <img src="images/stikers/IMG_0880.JPG" alt="Стикер 0880" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0881">
-              <img src="images/stikers/IMG_0881.JPG" alt="Стикер 0881" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0881.webp">
+                <img src="images/stikers/IMG_0881.JPG" alt="Стикер 0881" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0882">
-              <img src="images/stikers/IMG_0882.JPG" alt="Стикер 0882" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0882.webp">
+                <img src="images/stikers/IMG_0882.JPG" alt="Стикер 0882" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0883">
-              <img src="images/stikers/IMG_0883.JPG" alt="Стикер 0883" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0883.webp">
+                <img src="images/stikers/IMG_0883.JPG" alt="Стикер 0883" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0884">
-              <img src="images/stikers/IMG_0884.JPG" alt="Стикер 0884" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0884.webp">
+                <img src="images/stikers/IMG_0884.JPG" alt="Стикер 0884" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0885">
-              <img src="images/stikers/IMG_0885.JPG" alt="Стикер 0885" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0885.webp">
+                <img src="images/stikers/IMG_0885.JPG" alt="Стикер 0885" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0886">
-              <img src="images/stikers/IMG_0886.JPG" alt="Стикер 0886" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0886.webp">
+                <img src="images/stikers/IMG_0886.JPG" alt="Стикер 0886" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0887">
-              <img src="images/stikers/IMG_0887.JPG" alt="Стикер 0887" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0887.webp">
+                <img src="images/stikers/IMG_0887.JPG" alt="Стикер 0887" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0888">
-              <img src="images/stikers/IMG_0888.JPG" alt="Стикер 0888" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0888.webp">
+                <img src="images/stikers/IMG_0888.JPG" alt="Стикер 0888" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0889">
-              <img src="images/stikers/IMG_0889.JPG" alt="Стикер 0889" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0889.webp">
+                <img src="images/stikers/IMG_0889.JPG" alt="Стикер 0889" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0890">
-              <img src="images/stikers/IMG_0890.JPG" alt="Стикер 0890" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0890.webp">
+                <img src="images/stikers/IMG_0890.JPG" alt="Стикер 0890" loading="lazy">
+              </picture>
             </button>
             <button class="image-open sticker-image" type="button" aria-label="Увеличить стикер 0891">
-              <img src="images/stikers/IMG_0891.JPG" alt="Стикер 0891" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="/images/webp/stikers/IMG_0891.webp">
+                <img src="images/stikers/IMG_0891.JPG" alt="Стикер 0891" loading="lazy">
+              </picture>
             </button>
           </div>
         </div>
@@ -352,7 +518,10 @@
       <div class="invitation-grid" aria-label="Примеры пригласительных">
         <figure class="invitation-card">
           <button class="image-open invitation-image" type="button" aria-label="Увеличить свадебное пригласительное в розовой палитре">
-            <img src="images/invitation/IMG_0872.JPG" alt="Свадебное пригласительное в тёплой розовой палитре" width="3059" height="5277" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="/images/webp/invitation/IMG_0872.webp">
+              <img src="images/invitation/IMG_0872.JPG" alt="Свадебное пригласительное в тёплой розовой палитре" width="3059" height="5277" loading="lazy">
+            </picture>
           </button>
           <figcaption>Нежная палитра и винтажные детали</figcaption>
         </figure>
@@ -363,6 +532,396 @@
           <figcaption>Оливковые акценты и классическая композиция</figcaption>
         </figure>
       </div>
+    </section>
+
+    <section class="jl-section" id="zakaz" aria-labelledby="jl-title">
+      <div class="jl-inner">
+        <header class="jl-header">
+          <p class="eyebrow">Прайс · процесс · условия</p>
+          <h2 id="jl-title">Заказать <em>иллюстрацию</em></h2>
+          <p class="jl-lead">Портреты, персонажи, стикеры и пригласительные от JiefLyn. Здесь цены, сроки и условия — всё в одном месте.</p>
+          <p class="jl-muted">Стикеры и срочные заказы делаются быстрее.</p>
+          <a class="contact-button jl-order-link" href="https://t.me/JiefLyn" target="_blank" rel="noopener noreferrer">Оформить заказ в Telegram <span aria-hidden="true">↗</span></a>
+        </header>
+
+        <div class="jl-highlights" aria-label="Главные условия">
+          <span>Предоплата <b>50%</b></span>
+          <span><b>2</b> бесплатные правки на каждом этапе</span>
+          <span>До <b>2</b> открытых заказов одновременно</span>
+          <span>Иллюстрации: <b>от 7 до 30 дней</b></span>
+        </div>
+        <div class="jl-tabs" role="tablist" aria-label="Разделы заказа">
+          <a class="jl-tab" id="jl-tab-prices" role="tab" href="#zakaz" aria-controls="jl-panel-prices" aria-selected="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5.5V3h9l9 9-8.5 8.5-9-9V9"/><circle cx="8" cy="8" r="1"/><path d="m15.5 13 .7 1.4 1.6.2-1.2 1.1.3 1.6-1.4-.8-1.4.8.3-1.6-1.2-1.1 1.6-.2z"/></svg>
+            <span>Услуги и цены</span>
+          </a>
+          <a class="jl-tab" id="jl-tab-how" role="tab" href="#zakaz-how" aria-controls="jl-panel-how" aria-selected="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/><path d="m12 10 .8 1.6 1.8.3-1.3 1.2.3 1.8-1.6-.9-1.6.9.3-1.8-1.3-1.2 1.8-.3z"/></svg>
+            <span>Как заказать</span>
+          </a>
+          <a class="jl-tab" id="jl-tab-process" role="tab" href="#zakaz-process" aria-controls="jl-panel-process" aria-selected="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14 5 5 5M4 20l4.2-1 10.6-10.6a2.1 2.1 0 0 0-3-3L5.2 16 4 20Z"/><path d="m13 17 2 2 5-5"/></svg>
+            <span>Процесс и правки</span>
+          </a>
+          <a class="jl-tab" id="jl-tab-rights" role="tab" href="#zakaz-rights" aria-controls="jl-panel-rights" aria-selected="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 20 6v5c0 5-3.4 8.2-8 10-4.6-1.8-8-5-8-10V6z"/><path d="M12 16s-3-1.8-3-4a1.8 1.8 0 0 1 3-1.2 1.8 1.8 0 0 1 3 1.2c0 2.2-3 4-3 4Z"/></svg>
+            <span>Права и возврат</span>
+          </a>
+        </div>
+        <p class="jl-tab-hint" aria-hidden="true">Листайте разделы по горизонтали</p>
+
+        <section class="jl-panel jl-tone-prices" id="jl-panel-prices" role="tabpanel" aria-labelledby="jl-tab-prices" tabindex="0">
+          <h3 class="jl-section-title">Посчитать стоимость</h3>
+          <p class="jl-muted">Выберите формат, надбавки и желаемый срок. Сумма обновится сразу.</p>
+          <div class="jl-calculator">
+            <div class="jl-calc-fields">
+              <label class="jl-field">Тип работы
+                <select id="jl-format">
+                  <optgroup label="Базовая цена по кадрированию">
+                    <option value="2500" data-days="7-10" data-duration="7–10 дней">Бюст / по плечи — 2 500 ₽</option>
+                    <option value="3500" data-days="10-14" data-duration="10–14 дней">По пояс — 3 500 ₽</option>
+                    <option value="5500" data-days="14-21" data-duration="14–21 день" selected>Полный рост — 5 500 ₽</option>
+                    <option value="7000" data-days="18-25" data-duration="18–25 дней">Полный рост, сложная поза — 7 000 ₽</option>
+                  </optgroup>
+                  <optgroup label="Отдельные форматы">
+                    <option value="2000" data-days="7-7" data-duration="7 дней">Стилизованный портрет (аниме, чиби) — 2 000 ₽</option>
+                    <option value="4500" data-days="14-18" data-duration="14–18 дней">Полный рост в стиле аниме — 4 500 ₽</option>
+                    <option value="4500" data-days="14-18" data-duration="14–18 дней">Полу-реализм по фото — 4 500 ₽</option>
+                    <option value="2500" data-days="7-10" data-duration="7–10 дней">Фотореалистичный портрет по грудь — 2 500 ₽</option>
+                    <option value="6000" data-days="18-25" data-duration="18–25 дней">Полный рост в фотореализме — 6 000 ₽</option>
+                    <option value="2500" data-days="7-10" data-duration="7–10 дней">Логотип / эмблема (концепт + 3 правки) — 2 500 ₽</option>
+                  </optgroup>
+                </select>
+              </label>
+
+              <fieldset class="jl-fieldset">
+                <legend>Надбавки за сложность</legend>
+                <label><input type="checkbox" data-extra="2000" data-days="5" data-person> Второй персонаж <b>+2 000 ₽ · +5 дней</b></label>
+                <label><input type="checkbox" data-extra="1500" data-days="4" data-person> Третий персонаж <b>+1 500 ₽ · +4 дня</b></label>
+                <label><input type="checkbox" data-extra="4000" data-days="10" data-group> Группа 4+ человек <b>+4 000 ₽ · +10 дней</b></label>
+                <label><input type="checkbox" data-extra="1500" data-days="3"> Сложный / детализированный фон <b>+1 500 ₽ · +3 дня</b></label>
+                <label><input type="checkbox" data-extra="1000" data-days="2"> Орнамент, паттерн, сложный декор <b>+1 000 ₽ · +2 дня</b></label>
+                <label><input type="checkbox" data-extra="800" data-days="2"> Детализация одежды, украшений, тату <b>+800 ₽ · +2 дня</b></label>
+                <p class="jl-small">Простой фон (градиент, размытие) входит в цену. Для группы 4+ применяется только надбавка за группу.</p>
+              </fieldset>
+
+              <label class="jl-field">Срок
+                <select id="jl-rush">
+                  <option value="0" data-range="format" selected>Стандарт — без надбавки</option>
+                  <option value="20" data-range="10-14" data-duration="10–14 дней">Быстрый — 10–14 дней, если есть свободное место (+20%)</option>
+                  <option value="45" data-range="5-7" data-duration="5–7 дней">Срочный — 5–7 дней (+45%)</option>
+                  <option value="80" data-range="2-4" data-duration="2–4 дня">Возможный — 2–4 дня, по договорённости для простых заказов (+80%)</option>
+                  <option value="120" data-range="by-agreement" data-duration="Сегодня-завтра — по договорённости">Сегодня-завтра — по договорённости, не чаще 1 раза в месяц (+120%)</option>
+                </select>
+              </label>
+
+              <fieldset class="jl-fieldset jl-options">
+                <legend>Дополнительные опции</legend>
+                <div class="jl-option-row"><label><input type="checkbox" id="jl-sources"> Исходники (PSD, слои) <b>+1 500 ₽</b></label><details class="jl-tip"><summary aria-label="Что такое исходники?">?</summary><span>Исходники (PSD, слои)</span></details></div>
+                <div class="jl-option-row"><label><input type="checkbox" id="jl-license"> Коммерческая лицензия <b>+50% к цене</b></label><details class="jl-tip"><summary aria-label="Что такое коммерческая лицензия?">?</summary><span>Продажа, мерч, реклама — только по отдельной договорённости с автором.</span></details></div>
+              </fieldset>
+            </div>
+
+            <div class="jl-total-card">
+              <p class="jl-total-caption">Ориентировочная стоимость</p>
+              <p class="jl-total" id="jl-total" aria-live="polite">5 500 ₽</p>
+              <p class="jl-muted">Ориентировочно, точную цену называю после обсуждения.</p>
+              <p class="jl-deadline" id="jl-deadline" aria-live="polite">Срок по формату: 14–21 день</p>
+              <div class="jl-breakdown" id="jl-breakdown"><div class="jl-breakdown-row"><span>Полный рост</span><span>5 500 ₽</span></div></div>
+              <button class="contact-button jl-copy-calc" id="jl-copy-calc" type="button">Скопировать расчёт и написать в Telegram <span aria-hidden="true">↗</span></button>
+              <p class="jl-status" id="jl-calc-status" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+          <p class="jl-note">Срочность считается от суммы работы вместе с надбавками. Ускорение возможно только при полной предоплате и полном пакете материалов.</p>
+          <div class="jl-term-links">
+            <span>Подсказки к терминам:</span>
+            <details class="jl-tip"><summary>Правка</summary><span>Одна правка = одно изменение.</span></details>
+            <details class="jl-tip"><summary>Этап</summary><span>Каждый этап сдаётся отдельным сообщением. Следующий начинается только после вашего подтверждения.</span></details>
+          </div>
+
+          <h3 class="jl-section-title">Иллюстрации: цены и сроки</h3>
+          <h4>Базовая цена по кадрированию</h4>
+          <div class="jl-table-wrap"><table class="jl-table">
+            <thead><tr><th>Категория</th><th>Цена</th><th>Срок</th></tr></thead>
+            <tbody>
+              <tr><td data-label="Категория">Бюст / по плечи</td><td data-label="Цена" class="jl-price">2 500 ₽</td><td data-label="Срок">7–10 дней</td></tr>
+              <tr><td data-label="Категория">По пояс</td><td data-label="Цена" class="jl-price">3 500 ₽</td><td data-label="Срок">10–14 дней</td></tr>
+              <tr><td data-label="Категория">Полный рост</td><td data-label="Цена" class="jl-price">5 500 ₽</td><td data-label="Срок">14–21 день</td></tr>
+              <tr><td data-label="Категория">Полный рост, сложная поза</td><td data-label="Цена" class="jl-price">7 000 ₽</td><td data-label="Срок">18–25 дней</td></tr>
+            </tbody>
+          </table></div>
+          <h4>Надбавки за сложность</h4>
+          <div class="jl-table-wrap"><table class="jl-table">
+            <thead><tr><th>Что добавляется</th><th>Надбавка</th><th>К сроку</th></tr></thead>
+            <tbody>
+              <tr><td data-label="Что добавляется">Второй персонаж</td><td data-label="Надбавка" class="jl-price">+2 000 ₽</td><td data-label="К сроку">+5 дней</td></tr>
+              <tr><td data-label="Что добавляется">Третий персонаж</td><td data-label="Надбавка" class="jl-price">+1 500 ₽</td><td data-label="К сроку">+4 дня</td></tr>
+              <tr><td data-label="Что добавляется">Группа 4+ человек</td><td data-label="Надбавка" class="jl-price">+4 000 ₽</td><td data-label="К сроку">+10 дней</td></tr>
+              <tr><td data-label="Что добавляется">Сложный / детализированный фон</td><td data-label="Надбавка" class="jl-price">+1 500 ₽</td><td data-label="К сроку">+3 дня</td></tr>
+              <tr><td data-label="Что добавляется">Простой фон (градиент, размытие)</td><td data-label="Надбавка" class="jl-price">входит в цену</td><td data-label="К сроку">—</td></tr>
+              <tr><td data-label="Что добавляется">Орнамент, паттерн, сложный декор</td><td data-label="Надбавка" class="jl-price">+1 000 ₽</td><td data-label="К сроку">+2 дня</td></tr>
+              <tr><td data-label="Что добавляется">Детализация одежды, украшений, тату</td><td data-label="Надбавка" class="jl-price">+800 ₽</td><td data-label="К сроку">+2 дня</td></tr>
+            </tbody>
+          </table></div>
+          <h4>Отдельные форматы</h4>
+          <div class="jl-table-wrap"><table class="jl-table">
+            <thead><tr><th>Услуга</th><th>Цена</th><th>Срок</th></tr></thead>
+            <tbody>
+              <tr><td data-label="Услуга">Стилизованный портрет (аниме, чиби)</td><td data-label="Цена" class="jl-price">2 000 ₽</td><td data-label="Срок">7 дней</td></tr>
+              <tr><td data-label="Услуга">Полный рост в стиле аниме</td><td data-label="Цена" class="jl-price">4 500 ₽</td><td data-label="Срок">14–18 дней</td></tr>
+              <tr><td data-label="Услуга">Полу-реализм по фото</td><td data-label="Цена" class="jl-price">4 500 ₽</td><td data-label="Срок">14–18 дней</td></tr>
+              <tr><td data-label="Услуга">Фотореалистичный портрет по грудь</td><td data-label="Цена" class="jl-price">2 500 ₽</td><td data-label="Срок">7–10 дней</td></tr>
+              <tr><td data-label="Услуга">Полный рост в фотореализме</td><td data-label="Цена" class="jl-price">6 000 ₽</td><td data-label="Срок">18–25 дней</td></tr>
+              <tr><td data-label="Услуга">Логотип / эмблема (концепт + 3 правки)</td><td data-label="Цена" class="jl-price">2 500 ₽</td><td data-label="Срок">7–10 дней</td></tr>
+            </tbody>
+          </table></div>
+
+          <div class="jl-price-cards">
+            <article class="jl-price-card"><h4>Стикеры</h4><p class="jl-from">от 250 ₽</p><p>Один стикер — 250 ₽, 0,5–2 дня. Пакеты: 5 стикеров — 1 100 ₽; 10 — 2 000 ₽.</p><details><summary>Надбавки и условия</summary><ul><li>Реалистичные детали — +150 ₽ за шт.</li><li>Дополнительный персонаж в пакете — +300 ₽ за шт.</li><li>Усложнённая детализация — +100 ₽ за шт.</li><li>В заказе от 1 до 30 стикеров. Публикация набора в Telegram как стикерпак — бесплатно.</li></ul></details></article>
+            <article class="jl-price-card"><h4>Пригласительные</h4><p class="jl-from">от 1 200 ₽</p><p>Одно пригласительное (один дизайн, один формат) — 1 200 ₽, 5–7 дней.</p><details><summary>Штамповка имён</summary><p>Отдельная услуга: только работа с именами, без дизайна. В цену входит персонализация — подстановка имени, «от жениха / от невесты», номер стола, должность. Сам шаблон дизайна оплачивается отдельно.</p><ul><li>до 10 гостей — 80 ₽ за 1 шт., +1 день</li><li>11–30 — 60 ₽ за 1 шт., +2 дня</li><li>31–60 — 55 ₽ за 1 шт., +4 дня</li><li>61–100 — 50 ₽ за 1 шт., +5 дней</li></ul></details></article>
+          </div>
+
+          <details class="jl-more">
+            <summary>Другие цены и дополнительные опции</summary>
+            <h4>Стикеры</h4>
+            <div class="jl-table-wrap"><table class="jl-table">
+              <thead><tr><th>Формат</th><th>Цена</th><th>Срок</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Формат">Один стикер (по описанию или фото)</td><td data-label="Цена" class="jl-price">250 ₽</td><td data-label="Срок">0,5–2 дня</td></tr>
+                <tr><td data-label="Формат">Пакет из 5 стикеров (один персонаж, единый стиль)</td><td data-label="Цена" class="jl-price">1 100 ₽ <span class="jl-muted">(220 ₽ за шт.)</span></td><td data-label="Срок">3–5 дней</td></tr>
+                <tr><td data-label="Формат">Пакет из 10 стикеров (один персонаж, единый стиль)</td><td data-label="Цена" class="jl-price">2 000 ₽ <span class="jl-muted">(200 ₽ за шт.)</span></td><td data-label="Срок">5–8 дней</td></tr>
+              </tbody>
+            </table></div>
+            <div class="jl-table-wrap"><table class="jl-table">
+              <thead><tr><th>Надбавки к стикерам</th><th>Цена</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Надбавки к стикерам">Реалистичные детали (волосы, ткань, блики, тату)</td><td data-label="Цена" class="jl-price">+150 ₽ за шт.</td></tr>
+                <tr><td data-label="Надбавки к стикерам">Дополнительный персонаж в пакете</td><td data-label="Цена" class="jl-price">+300 ₽ за шт.</td></tr>
+                <tr><td data-label="Надбавки к стикерам">Усложнённая детализация</td><td data-label="Цена" class="jl-price">+100 ₽ за шт.</td></tr>
+              </tbody>
+            </table></div>
+            <h4>Пригласительные и штамповка имён</h4>
+            <div class="jl-table-wrap"><table class="jl-table">
+              <thead><tr><th>Количество гостей</th><th>Цена за 1 шт.</th><th>К сроку</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Количество гостей">до 10</td><td data-label="Цена за 1 шт." class="jl-price">80 ₽</td><td data-label="К сроку">+1 день</td></tr>
+                <tr><td data-label="Количество гостей">11–30</td><td data-label="Цена за 1 шт." class="jl-price">60 ₽</td><td data-label="К сроку">+2 дня</td></tr>
+                <tr><td data-label="Количество гостей">31–60</td><td data-label="Цена за 1 шт." class="jl-price">55 ₽</td><td data-label="К сроку">+4 дня</td></tr>
+                <tr><td data-label="Количество гостей">61–100</td><td data-label="Цена за 1 шт." class="jl-price">50 ₽</td><td data-label="К сроку">+5 дней</td></tr>
+              </tbody>
+            </table></div>
+            <div class="jl-table-wrap"><table class="jl-table">
+              <thead><tr><th>Дополнительные опции</th><th>Цена</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Дополнительные опции">Дополнительные правки сверх 2 бесплатных на этапе</td><td data-label="Цена" class="jl-price">+500 ₽ за каждую</td></tr>
+                <tr><td data-label="Дополнительные опции">Исходники (PSD, слои)</td><td data-label="Цена" class="jl-price">+1 500 ₽</td></tr>
+                <tr><td data-label="Дополнительные опции">Коммерческая лицензия (продажа, мерч, реклама)</td><td data-label="Цена" class="jl-price">+50% к цене</td></tr>
+              </tbody>
+            </table></div>
+          </details>
+
+          <details class="jl-more">
+            <summary>Пример расчёта из прайса</summary>
+            <p>Полный рост, 2 персонажа, сложный фон, детализация одежды, срок 7 дней.</p>
+            <div class="jl-table-wrap"><table class="jl-table jl-example">
+              <tbody>
+                <tr><td data-label="Позиция">Полный рост</td><td data-label="Сумма">5 500 ₽</td></tr>
+                <tr><td data-label="Позиция">Второй персонаж</td><td data-label="Сумма">+2 000 ₽</td></tr>
+                <tr><td data-label="Позиция">Сложный фон</td><td data-label="Сумма">+1 500 ₽</td></tr>
+                <tr><td data-label="Позиция">Детализация одежды</td><td data-label="Сумма">+800 ₽</td></tr>
+                <tr><td data-label="Позиция">Срочность +45% (от суммы с надбавками)</td><td data-label="Сумма">+4 410 ₽</td></tr>
+                <tr><td data-label="Позиция">Итого</td><td data-label="Сумма" class="jl-price">14 210 ₽</td></tr>
+              </tbody>
+            </table></div>
+          </details>
+        </section>
+
+        <section class="jl-panel jl-tone-how" id="jl-panel-how" role="tabpanel" aria-labelledby="jl-tab-how" tabindex="0" hidden>
+          <h3 class="jl-section-title">Как проходит заказ</h3>
+          <ol class="jl-order-steps">
+            <li><button type="button" aria-expanded="false" aria-controls="jl-step-materials"><span class="jl-step-icon" aria-hidden="true">✉</span><b>Материалы</b><span class="jl-step-description" id="jl-step-materials" hidden>Присылаете референсы и описание по шаблону ниже.</span></button></li>
+            <li><button type="button" aria-expanded="false" aria-controls="jl-step-deposit"><span class="jl-step-icon" aria-hidden="true">½</span><b>Предоплата 50%</b><span class="jl-step-description" id="jl-step-deposit" hidden>Бронирует место в очереди и фиксирует дату дедлайна.</span></button></li>
+            <li><button type="button" aria-expanded="false" aria-controls="jl-step-art"><span class="jl-step-icon" aria-hidden="true">✎</span><b>Эскиз → цвет → детали</b><span class="jl-step-description" id="jl-step-art" hidden>Каждый этап согласуем отдельно.</span></button></li>
+            <li><button type="button" aria-expanded="false" aria-controls="jl-step-payment"><span class="jl-step-icon" aria-hidden="true">½</span><b>Остаток 50%</b><span class="jl-step-description" id="jl-step-payment" hidden>Оплата перед отправкой финальных файлов.</span></button></li>
+            <li><button type="button" aria-expanded="false" aria-controls="jl-step-files"><span class="jl-step-icon" aria-hidden="true">✓</span><b>Файлы</b><span class="jl-step-description" id="jl-step-files" hidden>Получаете работу в Telegram.</span></button></li>
+          </ol>
+          <div class="jl-two-columns">
+            <article class="jl-info-card">
+              <h4>Сроки и оплата</h4>
+              <ul>
+                <li>Стандарт — 14–21 день.</li>
+                <li>Быстрый — 10–14 дней, если есть свободное место (+20%).</li>
+                <li>Срочный — 5–7 дней (+45%).</li>
+                <li>Возможный — 2–4 дня, по договорённости для простых заказов (+80%).</li>
+                <li>Сегодня-завтра — по договорённости, не чаще 1 раза в месяц (+120%).</li>
+                <li>Ускорение возможно только при полной предоплате и полном пакете материалов.</li>
+                <li>Способ оплаты: перевод на карту (по номеру карты, на её имя). Оплата делится на две части — только 50/50.</li>
+              </ul>
+              <p>Например, заказ «по пояс» — 3 500 ₽: предоплата 1 750 ₽ при оформлении и 1 750 ₽ перед финалом.</p>
+            </article>
+            <article class="jl-info-card">
+              <h4>Что прислать</h4>
+              <p><b>Обязательно:</b> 2–5 референсов; возраст, телосложение, рост, характер и настроение персонажа; внешность; одежда; поза; фон.</p>
+              <p><b>Желательно:</b> цель использования; палитра из 2–5 цветов; настроение кадра; формат и размер; желаемая дата; мудборд, если есть.</p>
+              <p>Если сложно описать словами — покажите картинкой. Фото в полный рост «как есть» подойдёт, остальное дорисую сама.</p>
+            </article>
+            <article class="jl-info-card">
+              <h4>Общие условия</h4>
+              <ul>
+                <li>Одновременно в работе не более 2 заказов, из них не более 1 срочного.</li>
+                <li>Материалы заказчик присылает заранее, иначе срок сдвигается на время ответов.</li>
+                <li>Права на публикацию, портфолио и конкурсы оговариваются до начала работы.</li>
+              </ul>
+            </article>
+          </div>
+          <details class="jl-more">
+            <summary>Подробный список материалов для заказа</summary>
+            <h4>Обязательно</h4>
+            <ul>
+              <li><b>Референсы</b> — 2–5 изображений в нужном стиле. Это важнее словесного описания.</li>
+              <li><b>Персонаж</b> — возраст, телосложение, рост, характер, настроение.</li>
+              <li><b>Внешность</b> — цвет и длина волос, цвет глаз, тип лица, особые приметы.</li>
+              <li><b>Одежда</b> — что надето, цвет, фактура, украшения, обувь. Можно прислать фото вещей отдельно.</li>
+              <li><b>Поза</b> — как стоит или сидит, ракурс, что делает руками.</li>
+              <li><b>Фон</b> — простой, сложный, конкретное место или настроение.</li>
+            </ul>
+            <h4>Желательно</h4>
+            <ul>
+              <li>Цель использования: для себя, подарок, соцсети, конкурс, мерч (от неё зависят формат файла и лицензия).</li>
+              <li>Цветовая палитра — 2–5 важных цветов.</li>
+              <li>Настроение кадра: спокойное, тревожное, торжественное, тёплое.</li>
+              <li>Формат и размер, если есть требования.</li>
+              <li>Желаемая дата. Без указания срока работа идёт в стандартном темпе — 14–21 день.</li>
+              <li>Мудборд, если он уже есть. Если нет — референсов и текста достаточно.</li>
+            </ul>
+          </details>
+          <h3 class="jl-section-title">Шаблон заказа</h3>
+          <pre class="jl-template" id="jl-template">Что рисуем: (кто, что, какое кадрирование)
+Референсы: (ссылки или фото, 2–5 шт.)
+Персонаж:
+— Возраст:
+— Телосложение / рост:
+— Характер / настроение:
+— Волосы:
+— Глаза:
+— Особые приметы:
+Одежда:
+— Верх:
+— Низ:
+— Обувь:
+— Украшения / аксессуары:
+— Цвета и фактуры:
+Поза и ракурс:
+Фон:
+Цвета, которые точно нужны:
+Настроение кадра:
+Цель использования: (для себя / подарок / соцсети / конкурс)
+Формат и куда пойдёт:
+Желаемый срок: (и есть ли срочность)
+Мудборд: (если есть)</pre>
+          <button class="jl-button-secondary" id="jl-copy-template" type="button">Скопировать шаблон</button>
+          <p class="jl-status" id="jl-template-status" role="status" aria-live="polite"></p>
+          <p><a class="contact-button jl-order-link" href="https://t.me/JiefLyn" target="_blank" rel="noopener noreferrer">Отправить заявку в Telegram <span aria-hidden="true">↗</span></a></p>
+        </section>
+
+        <section class="jl-panel jl-tone-process" id="jl-panel-process" role="tabpanel" aria-labelledby="jl-tab-process" tabindex="0" hidden>
+          <h3 class="jl-section-title">Этапы работы</h3>
+          <p>Каждый этап сдаётся отдельным сообщением. Следующий начинается только после вашего подтверждения.</p>
+          <div class="jl-review-grid">
+            <article class="jl-review-card" data-stage="Эскиз">
+              <h4>Эскиз</h4><p>Композиция, поза, ракурс, размещение персонажа</p>
+              <div class="jl-revision-icons" aria-label="2 бесплатные правки, далее 500 рублей"><span aria-hidden="true">●</span><span aria-hidden="true">●</span><span aria-hidden="true">○</span><span aria-hidden="true">○</span></div>
+              <p class="jl-revision-price">Каждая следующая правка — +500 ₽.</p>
+              <p class="jl-revision-count" aria-live="polite">Бесплатно осталось: <b>2</b>. Дополнительных: <b>0</b> — 0 ₽.</p>
+              <button class="jl-button-secondary jl-add-revision" type="button">+1 правка</button>
+            </article>
+            <article class="jl-review-card" data-stage="Цвет">
+              <h4>Цвет</h4><p>Палитра, свет, общая атмосфера</p>
+              <div class="jl-revision-icons" aria-label="2 бесплатные правки, далее 500 рублей"><span aria-hidden="true">●</span><span aria-hidden="true">●</span><span aria-hidden="true">○</span><span aria-hidden="true">○</span></div>
+              <p class="jl-revision-price">Каждая следующая правка — +500 ₽.</p>
+              <p class="jl-revision-count" aria-live="polite">Бесплатно осталось: <b>2</b>. Дополнительных: <b>0</b> — 0 ₽.</p>
+              <button class="jl-button-secondary jl-add-revision" type="button">+1 правка</button>
+            </article>
+            <article class="jl-review-card" data-stage="Детали">
+              <h4>Детали</h4><p>Проработка одежды, волос, текстур, фона, эффектов</p>
+              <div class="jl-revision-icons" aria-label="2 бесплатные правки, далее 500 рублей"><span aria-hidden="true">●</span><span aria-hidden="true">●</span><span aria-hidden="true">○</span><span aria-hidden="true">○</span></div>
+              <p class="jl-revision-price">Каждая следующая правка — +500 ₽.</p>
+              <p class="jl-revision-count" aria-live="polite">Бесплатно осталось: <b>2</b>. Дополнительных: <b>0</b> — 0 ₽.</p>
+              <button class="jl-button-secondary jl-add-revision" type="button">+1 правка</button>
+            </article>
+          </div>
+          <h3 class="jl-section-title">Какие бывают правки</h3>
+          <div class="jl-revision-examples">
+            <article><h4>Композиция</h4><p>Поза, ракурс, кадрирование, расположение объектов. Например: «перенести фигуру левее», «развернуть в профиль».</p></article>
+            <article><h4>Цвет</h4><p>Палитра, свет, контраст, температура. Например: «сделать фон холоднее», «убрать синий в коже».</p></article>
+            <article><h4>Детали</h4><p>Одежда, украшения, причёска, мелкие элементы, фон. Например: «добавить серёжки», «убрать шарф», «дорисовать катану».</p></article>
+          </div>
+          <details class="jl-more">
+            <summary>Другие условия правок и готовые файлы</summary>
+            <ul>
+              <li>Правки накапливаются: если на этапе эскиза внесено 4 изменения, это 2 бесплатные и 2 по 500 ₽.</li>
+              <li>Смена общей концепции (другой персонаж, стиль, сюжет) правкой не считается — это новый заказ по базовой цене.</li>
+              <li>Правки после финальной сдачи не входят в стоимость: +30% от цены заказа за каждое изменение.</li>
+              <li>Если заказчик не отвечает на этапе правок дольше 5 дней, этап считается согласованным, а срок сдвигается на время ожидания.</li>
+            </ul>
+            <h4>Что вы получаете</h4>
+            <ul>
+              <li>.pdf — основной универсальный файл.</li>
+              <li>.jpeg — лёгкий формат для соцсетей и мессенджеров.</li>
+              <li>.png — с прозрачным фоном для наложений и стикеров.</li>
+              <li>.tiff — без потери качества, для профессионального использования.</li>
+              <li>Все форматы включены в цену. Все этапы работы (эскиз → цвет → детали) — по запросу.</li>
+              <li>Исходник со слоями (.psd) — за дополнительные 1 500 ₽.</li>
+              <li>Передача файлов в Telegram: архивом или ссылкой на облако, на ваш выбор. Срок хранения файлов у вас не ограничен.</li>
+            </ul>
+            <p>Средний срок одного заказа — от 1 недели до 1 месяца, в зависимости от сложности и загрузки.</p>
+          </details>
+        </section>
+
+        <section class="jl-panel jl-tone-rights" id="jl-panel-rights" role="tabpanel" aria-labelledby="jl-tab-rights" tabindex="0" hidden>
+          <h3 class="jl-section-title">Авторские права и публикация</h3>
+          <p>Автор работы — JiefLyn. Все права на рисунок принадлежат ей.</p>
+          <div class="jl-rights-grid">
+            <article class="jl-rights-card jl-allowed">
+              <h4><span aria-hidden="true">✓</span> Можно</h4>
+              <p>Личное использование: аватар, сторис, печать для себя, подарок, выставка в соцсетях — с указанием авторства.</p>
+              <p>Коммерческое использование — только по отдельной договорённости с автором (лицензия: продажа, мерч, реклама).</p>
+              <p>Автор может публиковать работу и её процесс (WIP, этапы, скетчи) в своих соцсетях и Telegram-канале без согласования и доплаты, а также оставлять работу в портфолио, в том числе в закрытом или платном доступе.</p>
+            </article>
+            <article class="jl-rights-card jl-forbidden">
+              <h4><span aria-hidden="true">×</span> Нельзя</h4>
+              <p>Выдавать рисунок за свою работу. Передача, продажа или публикация рисунка как собственной работы без указания авторства запрещены.</p>
+              <p>Передавать работу третьим лицам без письменного согласия автора.</p>
+            </article>
+          </div>
+          <h3 class="jl-section-title">Что, если…</h3>
+          <div class="jl-situations">
+            <details><summary>Хочу участвовать в конкурсе</summary><p>Только с согласия автора. Либо работа остаётся у автора и участвует под её именем, либо передаётся заказчику с письменным разрешением и пометкой «автор работы — JiefLyn», с уведомлением организаторов.</p></details>
+            <details><summary>Хочу распечатать для себя или подарить</summary><p>Это личное использование: печать для себя и подарок разрешены с указанием авторства.</p></details>
+            <details><summary>Хочу продать работу или использовать для мерча и рекламы</summary><p>Коммерческое использование (продажа, мерч, реклама) — только по отдельной договорённости с автором.</p></details>
+            <details><summary>Хочу выдать работу за свою</summary><p>Запрещено. Покупка не передаёт авторские права. Представление работы под собственным именем без письменного согласия автора не допускается.</p></details>
+            <details><summary>Организатор конкурса хочет показать работу</summary><p>Допускается использование работы организатором в своих медиа, каталогах и соцсетях с указанием авторства. Разрешение фиксируется в подтверждении заказа.</p></details>
+            <details><summary>Хочу передать или продать работу другому человеку</summary><p>Работа неотчуждаема без письменного разрешения автора.</p></details>
+          </div>
+          <p class="jl-note">Заказчик приобретает право личного использования работы. Авторские права, включая право публикации, размещения в портфолио и участия в творческих конкурсах, остаются у автора. Передача работы третьим лицам и представление её под собственным именем без письменного согласия автора не допускаются.</p>
+
+          <h3 class="jl-section-title">Отказ и возврат предоплаты</h3>
+          <div class="jl-refund-list">
+            <article class="jl-refund-card jl-refund-partial"><span>Частичный возврат</span><h4>До начала работы</h4><p>Заказчик передумал до начала работы (эскиз не начат): предоплата возвращается за вычетом 30% за бронирование места и потраченное время.</p></article>
+            <article class="jl-refund-card jl-refund-none"><span>Без возврата</span><h4>После 1–2 эскизов</h4><p>Предоплата не возвращается: работа начата, этапы выполнены.</p></article>
+            <article class="jl-refund-card jl-refund-none"><span>Без возврата</span><h4>Отказ от результата</h4><p>Если претензий по качеству нет, оплата за выполненные этапы не возвращается.</p></article>
+            <article class="jl-refund-card jl-refund-none"><span>Без возврата</span><h4>Нет ответа больше 14 дней</h4><p>Работа на паузе, срок сдвигается на время ответов. При простое более 14 дней заказ закрывается, предоплата не возвращается, место освобождается.</p></article>
+            <article class="jl-refund-card jl-refund-full"><span>Полный возврат</span><h4>Автор не смог выполнить заказ в срок</h4><p>При форс-мажоре или болезни предоплата возвращается полностью.</p></article>
+          </div>
+          <ul>
+            <li>Возврат делается тем же способом, каким была оплата, в течение 3 рабочих дней.</li>
+            <li>Вместо возврата можно перенести заказ на другую работу или другую дату.</li>
+            <li>Работа, соответствующая ТЗ и заявленному объёму, не является основанием для возврата — для этого есть бесплатные правки на каждом этапе.</li>
+          </ul>
+        </section>
+      </div>
+      <a class="jl-top" href="#zakaz" aria-label="Наверх">↑</a>
+      <a class="jl-mobile-cta jl-order-link" href="https://t.me/JiefLyn" target="_blank" rel="noopener noreferrer">Оформить заказ <span aria-hidden="true">↗</span></a>
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
@@ -390,6 +949,8 @@
   <dialog class="image-viewer" aria-label="Просмотр изображения">
     <div class="viewer-toolbar">
       <div class="viewer-actions">
+        <button class="viewer-prev" type="button" aria-label="Предыдущее изображение">←</button>
+        <button class="viewer-next" type="button" aria-label="Следующее изображение">→</button>
         <button class="viewer-zoom-out" type="button" aria-label="Уменьшить">−</button>
         <button class="viewer-zoom-in" type="button" aria-label="Увеличить">+</button>
         <button class="viewer-reset" type="button" aria-label="Сбросить масштаб">Сбросить</button>
