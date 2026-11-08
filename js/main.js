@@ -7,6 +7,27 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
+// Подключаем видео, когда оно приближается к экрану, чтобы не загружать их заранее.
+const speedpaintVideos = document.querySelectorAll("video[data-src]");
+if ("IntersectionObserver" in window) {
+  const speedpaintObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        video.src = video.dataset.src;
+        video.load();
+        observer.unobserve(video);
+      }
+    });
+  }, { rootMargin: "300px 0px" });
+  speedpaintVideos.forEach((video) => speedpaintObserver.observe(video));
+} else {
+  speedpaintVideos.forEach((video) => {
+    video.src = video.dataset.src;
+    video.load();
+  });
+}
+
 const orderSection = document.getElementById("zakaz");
 if (orderSection) {
   const tabs = [...orderSection.querySelectorAll('[role="tab"]')];
@@ -190,10 +211,6 @@ if (orderSection) {
   updateCalculator();
 
   function copyText(text) {
-    if (navigator.clipboard && window.isSecureContext) {
-      return navigator.clipboard.writeText(text);
-    }
-
     const temporaryField = document.createElement("textarea");
     temporaryField.value = text;
     temporaryField.setAttribute("readonly", "");
@@ -201,9 +218,20 @@ if (orderSection) {
     temporaryField.style.opacity = "0";
     document.body.append(temporaryField);
     temporaryField.select();
-    const copied = document.execCommand("copy");
-    temporaryField.remove();
-    return copied ? Promise.resolve() : Promise.reject(new Error("Копирование не поддерживается браузером."));
+    let copied = false;
+    try {
+      copied = document.execCommand("copy");
+    } finally {
+      temporaryField.remove();
+    }
+
+    if (copied) {
+      return Promise.resolve();
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    return Promise.reject(new Error("Копирование не поддерживается браузером."));
   }
 
   const copyTemplateButton = document.getElementById("jl-copy-template");
@@ -227,13 +255,22 @@ if (orderSection) {
       `Итого: ${rubles(total)}`,
       "Ориентировочно, точную цену называю после обсуждения."
     ].join("\n");
+    const copyPromise = copyText(calculationText);
+    const fallbackField = document.getElementById("jl-calc-fallback");
     window.open(ORDER_TELEGRAM_URL, "_blank", "noopener,noreferrer");
-    copyText(calculationText)
+    copyPromise
       .then(() => {
-        calculatorStatus.textContent = "Расчёт скопирован. Открылся Telegram.";
+        fallbackField.hidden = true;
+        calculatorStatus.dataset.state = "success";
+        calculatorStatus.textContent = "✓ Расчёт скопирован! Вставьте его в поле сообщения в Telegram.";
       })
       .catch(() => {
-        calculatorStatus.textContent = "Telegram открыт, но расчёт не скопирован. Скопируйте сумму вручную.";
+        fallbackField.value = calculationText;
+        fallbackField.hidden = false;
+        fallbackField.focus();
+        fallbackField.select();
+        calculatorStatus.dataset.state = "error";
+        calculatorStatus.textContent = "Не удалось скопировать автоматически. Текст выделен — скопируйте его вручную.";
       });
   });
 
@@ -271,6 +308,24 @@ if (orderSection) {
   window.addEventListener("scroll", updateTopButton, { passive: true });
   window.addEventListener("resize", updateTopButton);
   updateTopButton();
+
+  const contactSection = document.getElementById("contact");
+  if (contactSection) {
+    const mobileViewport = window.matchMedia("(max-width: 700px)");
+    let contactIsVisible = false;
+    const updateContactActions = () => {
+      document.body.classList.toggle(
+        "jl-contact-visible",
+        mobileViewport.matches && contactIsVisible
+      );
+    };
+    const contactObserver = new IntersectionObserver((entries) => {
+      contactIsVisible = entries.some((entry) => entry.isIntersecting);
+      updateContactActions();
+    });
+    contactObserver.observe(contactSection);
+    mobileViewport.addEventListener("change", updateContactActions);
+  }
 
   const revealObserver = "IntersectionObserver" in window
     ? new IntersectionObserver((entries, observer) => {
@@ -450,7 +505,7 @@ if (viewer) {
       return;
     }
     button.addEventListener("click", () => {
-      const group = button.closest(".gallery-pages, .sticker-track, .invitation-grid");
+      const group = button.closest(".gallery-pages, .sticker-track, .invitation-grid, .process-steps");
       imageButtons = [...(group || button.parentElement).querySelectorAll(".image-open")]
         .filter((imageButton) => !imageButton.disabled && imageButton.querySelector("img"));
       if (!group) {
