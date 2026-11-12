@@ -91,14 +91,6 @@ if (orderSection) {
   window.addEventListener("hashchange", activateFromHash);
   activateFromHash();
 
-  orderSection.querySelectorAll(".jl-panel details").forEach((disclosure) => {
-    const summary = disclosure.querySelector("summary");
-    summary.setAttribute("aria-expanded", String(disclosure.open));
-    disclosure.addEventListener("toggle", () => {
-      summary.setAttribute("aria-expanded", String(disclosure.open));
-    });
-  });
-
   orderSection.querySelectorAll(".jl-order-link").forEach((link) => {
     link.href = ORDER_TELEGRAM_URL;
   });

@@ -1991,8 +1991,6 @@ p {
 }
 
 .jl-total-card {
-  position: sticky;
-  top: 145px;
   padding: 22px;
   border: 1px solid var(--burgundy);
   background: var(--paper);
@@ -2113,41 +2111,6 @@ p {
   display: inline-block;
   position: relative;
   color: var(--ink);
-}
-
-.jl-tip summary {
-  width: fit-content;
-  cursor: pointer;
-  color: var(--burgundy);
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-underline-offset: 3px;
-}
-
-.jl-options .jl-tip summary {
-  width: 22px;
-  height: 22px;
-  display: inline-grid;
-  place-items: center;
-  border: 1px solid var(--burgundy);
-  border-radius: 50%;
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  text-decoration: none;
-}
-
-.jl-tip > span {
-  width: min(260px, 75vw);
-  position: absolute;
-  z-index: 6;
-  top: calc(100% + 5px);
-  left: 0;
-  padding: 10px 12px;
-  border: 1px solid var(--burgundy);
-  background: var(--paper);
-  color: var(--ink);
-  box-shadow: 0 4px 12px rgba(57, 69, 47, 0.15);
-  font-size: 0.78rem;
 }
 
 .jl-table-wrap {
@@ -2598,10 +2561,6 @@ p {
 
   .jl-calculator {
     grid-template-columns: 1fr;
-  }
-
-  .jl-total-card {
-    position: static;
   }
 
   .jl-table thead {
